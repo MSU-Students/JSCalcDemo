@@ -1,11 +1,13 @@
 let {Calc, PI} = require('./calc.js');
 
-var myCalc = new Calc();
-console.log(myCalc.add(1, 2));
+(async function main() {
+    var myCalc = new Calc();
+    console.log(myCalc.add(1, 2));
 
-var myPrime = myCalc.prime(500);
+    var myPrime = await myCalc.prime(500);
 
-myPrime.then(function(value) {
-    console.log(value);
-});
-console.log('end of program');
+    console.log(myPrime);
+
+    console.log('end of program');
+    
+}());
