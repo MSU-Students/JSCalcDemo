@@ -8,7 +8,11 @@ class Calc {
     }
 
     async prime(n) {
-        return n;
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve(n);
+            }, 5 * 1000);
+        });
     }
 }
 
