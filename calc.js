@@ -6,6 +6,10 @@ class Calc {
     sub(x, y) {
         return x - y;
     }
+
+    async prime(n) {
+        return n;
+    }
 }
 
 const PI = 13.143;
